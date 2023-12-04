@@ -12,6 +12,5 @@ public class Inventory {
         inventoryList.add("Rope");
         inventoryList.add("Rations");
         inventoryList.add("Bedroll");
-        inventoryList.add("Water Flask");
     }
 }

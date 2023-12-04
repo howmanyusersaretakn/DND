@@ -23,36 +23,42 @@ public class Player {
 class Barbar extends Player{
     Barbar(){
         super(16, 12, 16, 14, 14, 9, 15);
+        inv.inventoryBasic();
         inv.inventoryAdd("Axe");
     } 
 }
 class Bard extends Player{
     Bard(){
         super(12, 17, 11, 14, 13, 12, 8);
+        inv.inventoryBasic();
         inv.inventoryAdd("Lute");
     }
 }
 class Cleric extends Player{
     Cleric(){
         super(9, 9, 8, 14, 12, 11, 7);
+        inv.inventoryBasic();
         inv.inventoryAdd("Mace");
     }
 }
 class Druid extends Player{
     Druid(){
         super(14, 13, 8, 10, 15, 17, 7);
+        inv.inventoryBasic();
         inv.inventoryAdd("Staff");
     }
 }
 class Fighter extends Player{
     Fighter(){
         super(12, 11, 14, 13, 11, 8, 12);
+        inv.inventoryBasic();
         inv.inventoryAdd("Poleaxe");
     }
 }
 class Monk extends Player{
     Monk(){
         super(13, 10, 12, 13, 13, 17, 9);
+        inv.inventoryBasic();
         inv.inventoryAdd("Spear");
     }
 }

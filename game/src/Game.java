@@ -1,8 +1,24 @@
 import java.util.*;
 public class Game {
+    // ArrayList<String> players = new ArrayList<>();
     public static void main(String[] args) {
         Scanner scan = new Scanner(System.in);
+        Encounter DIE = new Encounter();
         Player p1 = null;
+// If you want to add multiple players
+// System.out.println("How many players would you like?")
+// int playerNum = scan.nextInt();
+/* 
+switch(playerNum) {
+    case(1):
+        Player p1 = null;
+    case(2):
+        Player p1 = null;
+        Player p2 = null;
+} 
+So on so forth
+*/
+
         System.out.println("Welcome to a DND journey. Pick your character class \n 1. Barbarian \n 2. Bard \n 3. Cleric \n 4. Druid \n 5. Fighter \n 6. Monk \n 7. Paladin \n 8. Ranger \n 9. Rogue \n 10. Sorceror \n 11. Warlock \n 12. Wizard");
         int charClass = scan.nextInt();
         switch(charClass){
@@ -58,8 +74,9 @@ public class Game {
                 System.out.println("You are a disappointment!!!");
                 System.exit(0);
         }
-        
-        
+        // System.out.println(p1.inv.inventoryList); this prints player inventory
+        DIE.encountStart();
+        System.out.println(p1.inv.inventoryList);
         scan.close();
     }
 }
