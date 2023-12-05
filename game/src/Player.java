@@ -17,6 +17,14 @@ public class Player {
         this.Cha = Cha;
         this.hp = hp;
     }
+
+    public String toString() {
+        return "Strength: " + this.Str + ", Dexterity: " + this.Dex + ", Constitution: " + this.Con + ", Intelligence: " + this.Intel + ", Wisdom: " + this.Wis + ", Charisma:" + this.Cha + ", HP: " + this.hp;
+    }
+
+    // public String inventoryPrint(){
+    //     return this.inv;
+    // }
 }
 /*Establishing Class stats and unique weapon/equipment (Barbarian, Bard, Cleric, Druid, Fighter, Monk, Paladin, Ranger, Rogue,
  * Sorceror, Warlock, Wizard)*/
@@ -26,6 +34,11 @@ class Barbar extends Player{
         inv.inventoryBasic();
         inv.inventoryAdd("Axe");
     } 
+
+    public String toString() { 
+        return "Barbar Stats: " + super.toString();
+    }
+
 }
 class Bard extends Player{
     Bard(){
@@ -33,12 +46,20 @@ class Bard extends Player{
         inv.inventoryBasic();
         inv.inventoryAdd("Lute");
     }
+
+    public String toString() { 
+        return "Bard Stats: " + super.toString();
+    }
 }
 class Cleric extends Player{
     Cleric(){
         super(9, 9, 8, 14, 12, 11, 7);
         inv.inventoryBasic();
         inv.inventoryAdd("Mace");
+    }
+
+    public String toString() { 
+        return "Cleric Stats: " + super.toString();
     }
 }
 class Druid extends Player{
