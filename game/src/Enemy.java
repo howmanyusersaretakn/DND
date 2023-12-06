@@ -6,12 +6,12 @@ public class Enemy {
     protected int Wis;
     protected int Cha;
     protected int hp;
-    static String[] tiny = {"Badger(cr0)", "Crawling Claw(0)", "Demilich(18)", "Faerie Dragon(1)", "Flameskull(4)", "Homunculus(0)", "Intellect Devourer(2)", "Pseudodragon(1/4)"};
+    static String[] tiny = {"Badger(0)", "Crawling Claw(0)", "Demilich(18)", "Faerie Dragon(1)", "Flameskull(4)", "Homunculus(0)", "Intellect Devourer(2)", "Pseudodragon(1/4)"};
     static String[] small = {"Darkmantle(1/2)", "Flying Sword(1/4)", "Giant Centipede(1/4)", "Winged Kobold(1/4)", "Awakened Shrub(0)"};
-    static String[] med = {"Acolyte(cr1/4)", "Animated Armor(1)", "Archmage(12)", "Doppleganger(3)", "Bandit(1/8)", "Bandit Captain(2)", "Berserker(2)", "Blue Dragon Wyrmling(3)", "Death Knight(17)", "Drow Mage(7)"};
-    // String[] large = {};
-    // String[] huge = {};
-    // String[] gargant = {};
+    static String[] med = {"Acolyte(1/4)", "Animated Armor(1)", "Archmage(12)", "Doppleganger(3)", "Bandit(1/8)", "Bandit Captain(2)", "Berserker(2)", "Blue Dragon Wyrmling(3)", "Death Knight(17)", "Drow Mage(7)"};
+    static String[] large = {"Chimera(6)", "Dao(11)", "Dire Wolf(1)", "Giant Owl(1/4)", "Gorgon(5)", "Grick Alpha(7)", "Griffon(2)", "Minotaur(3)", "Owlbear(3)", "Pegasus(2)", "Wyvern(6)"};
+    static String[] huge = {"Tyrannosaurus Rex(8)", "Treant(9)", "Stone Giant(7)", "Storm Giant(13)", "Hydra(8)", "Goristro(17)", "Giant Constrictor Snake(2)", "Frost Giant(8)", "Empyrean(23)", "Balor(19)", "Behir(11)", "Adult Green Dragon(15)"};
+    static String[] gargant = {""};
 }
 
 // TINY ENEMIES
@@ -204,6 +204,61 @@ class LargeEnemy extends Enemy{
         this.hp = hp;    
     }
 }
+class Chimera extends LargeEnemy{
+    Chimera(){
+        super(19,11,19,3,14,10,114);
+    }
+}
+class Dao extends LargeEnemy{
+    Dao(){
+        super(23,12,24,12,13,14,187);
+    }
+}
+class DireWolf extends LargeEnemy{
+    DireWolf(){
+        super(17,15,15,3,12,7,37);
+    }
+}
+class GiantOwl extends LargeEnemy{
+    GiantOwl(){
+        super(13,15,12,8,13,10,19);
+    }
+}
+class Gorgon extends LargeEnemy{
+    Gorgon(){
+        super(20,11,18,2,12,7,114);
+    }
+}
+class GrickAlpha extends LargeEnemy{
+    GrickAlpha(){
+        super(18,16,15,4,14,9,75);
+    }
+}
+class Griffon extends LargeEnemy{
+    Griffon(){
+        super(18,15,16,2,13,8,59);
+    }
+}
+class Minotaur extends LargeEnemy{
+    Minotaur(){
+        super(18,11,16,6,16,9,76);
+    }
+}
+class OwlBear extends LargeEnemy{
+    OwlBear(){
+        super(20,12,17,3,12,7,59);
+    }
+}
+class Pegasus extends LargeEnemy{
+    Pegasus(){
+        super(18,15,16,10,15,13,59);
+    }
+}
+class Wyvern extends LargeEnemy{
+    Wyvern(){
+        super(19,10,16,5,12,6,110);
+    }
+}
 
 // HUGE ENEMIES
 class HugeEnemy extends Enemy{
@@ -215,6 +270,66 @@ class HugeEnemy extends Enemy{
         this.Wis = Wis;
         this.Cha = Cha;
         this.hp = hp;    
+    }
+}
+class tRex extends HugeEnemy{
+    tRex(){
+        super(25,10,19,2,12,9,136);
+    }
+}
+class Treant extends HugeEnemy{
+    Treant(){
+        super(23,8,21,12,16,12,138);
+    }
+}
+class StoneGiant extends HugeEnemy{
+    StoneGiant(){
+        super(23,15,20,10,12,9,126);
+    }
+}
+class StormGiant extends HugeEnemy{
+    StormGiant(){
+        super(23,14,20,16,18,18,230);
+    }
+}
+class Hydra extends HugeEnemy{
+    Hydra(){
+        super(20,12,20,2,10,7,172);
+    }
+}
+class Goristro extends HugeEnemy{
+    Goristro(){
+        super(25,11,25,6,13,14,310);
+    }
+}
+class GiantConstrictSnake extends HugeEnemy{
+    GiantConstrictSnake(){
+        super(19,14,12,1,10,3,60);
+    }
+}
+class FrostGiant extends HugeEnemy{
+    FrostGiant(){
+        super(23,9,21,9,10,12,138);
+    }
+}
+class Empyrean extends HugeEnemy{
+    Empyrean(){
+        super(30,21,30,21,22,27,313);
+    }
+}
+class Balor extends HugeEnemy{
+    Balor(){
+        super(26,15,22,20,16,22,262);
+    }
+}
+class Behir extends HugeEnemy{
+    Behir(){
+        super(23,16,18,7,14,12,168);
+    }
+}
+class AdultGreenDragon extends HugeEnemy{
+    AdultGreenDragon(){
+        super(23,12,21,18,15,17,207);
     }
 }
 
@@ -230,6 +345,7 @@ class GargEnemy extends Enemy{
         this.hp = hp;    
     }
 }
+
 
 
 

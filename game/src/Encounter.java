@@ -32,38 +32,38 @@ public class Encounter {
             break;
             case(1):
             int SmallRand = (int) (Math.random() * Enemy.small.length);
-            if(Enemy.small[SmallRand].equals("Dark Mantle")){
+            if(Enemy.small[SmallRand].equals("Dark Mantle(1/2)")){
                 enemy = new DarkMantle();
-            } else if(Enemy.small[SmallRand].equals("Giant Centipede")){
+            } else if(Enemy.small[SmallRand].equals("Giant Centipede(1/4)")){
                 enemy = new CentiGiant();
-            } else if(Enemy.small[SmallRand].equals("Winged Kobold")){
+            } else if(Enemy.small[SmallRand].equals("Winged Kobold(1/4)")){
                 enemy = new KoboldWing();
-            } else if(Enemy.small[SmallRand].equals("Awakened Shrub")){
+            } else if(Enemy.small[SmallRand].equals("Awakened Shrub(0)")){
                 enemy = new ShrubAwake();
-            } else if(Enemy.small[SmallRand].equals("Flying Sword")){
+            } else if(Enemy.small[SmallRand].equals("Flying Sword(1/4)")){
                 enemy = new SwordFly();
             } 
             case(2):
             int MedRand = (int) (Math.random()*Enemy.med.length);
-            if(Enemy.med[MedRand].equals("")){
+            if(Enemy.med[MedRand].equals("Acolyte(1/4)")){
                 enemy = new Acolyte();
-            } else if(Enemy.med[MedRand].equals("")){
+            } else if(Enemy.med[MedRand].equals("Animated Armor(1)")){
                 enemy = new ArmorAnim();
-            } else if(Enemy.med[MedRand].equals("")){
+            } else if(Enemy.med[MedRand].equals("Archmage(12)")){
                 enemy = new ArchMage();
-            } else if(Enemy.med[MedRand].equals("")){
+            } else if(Enemy.med[MedRand].equals("Doppleganger(3)")){
                 enemy = new DoppleGang();
-            } else if(Enemy.med[MedRand].equals("")){
+            } else if(Enemy.med[MedRand].equals("Bandit(1/8)")){
                 enemy = new Bandit();
-            } else if(Enemy.med[MedRand].equals("")){
+            } else if(Enemy.med[MedRand].equals("Bandit Captain(2)")){
                 enemy = new CaptBandit();
-            } else if(Enemy.med[MedRand].equals("")){
+            } else if(Enemy.med[MedRand].equals("Berserker(2)")){
                 enemy = new Berserker();
-            } else if(Enemy.med[MedRand].equals("")){
+            } else if(Enemy.med[MedRand].equals("Blue Dragon Wyrmling(3)")){
                 enemy = new BlueDragonWyrm();
-            } else if(Enemy.med[MedRand].equals("")){
+            } else if(Enemy.med[MedRand].equals("Death Knight(17)")){
                 enemy = new DeathKnight();
-            } else if(Enemy.med[MedRand].equals("")){
+            } else if(Enemy.med[MedRand].equals("Drow Mage(7)")){
                 enemy = new DrowMage();
             } 
             case(3):

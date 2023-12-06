@@ -1,19 +1,19 @@
 import java.util.*;
 public class Inventory {
-    ArrayList<String> inventoryList = new ArrayList<>();
+    ArrayList<String> InventoryList = new ArrayList<>();
     public void inventoryAdd(String item){
-        inventoryList.add(item);
+        InventoryList.add(item);
     }
     public void inventoryRem(String item){
-        inventoryList.remove(item);
+        InventoryList.remove(item);
     }
     public void inventoryBasic(){
-        inventoryList.add("Backpack");
-        inventoryList.add("Potion");
-        inventoryList.add("Dagger");
-        inventoryList.add("Torch");
-        inventoryList.add("Rope");
-        inventoryList.add("Rations");
-        inventoryList.add("Bedroll");
+        InventoryList.add("Backpack");
+        InventoryList.add("Potion");
+        InventoryList.add("Dagger");
+        InventoryList.add("Torch");
+        InventoryList.add("Rope");
+        InventoryList.add("Rations");
+        InventoryList.add("Bedroll");
     }
 }

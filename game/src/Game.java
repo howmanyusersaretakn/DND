@@ -11,8 +11,8 @@ public class Game {
         System.out.println("Welcome to a DND journey. Pick your character class \n 1. Barbarian \n 2. Bard \n 3. Cleric \n 4. Druid \n 5. Fighter \n 6. Monk \n 7. Paladin \n 8. Ranger \n 9. Rogue \n 10. Sorceror \n 11. Warlock \n 12. Wizard");
         for(int i = 0; i < PlayerNum; i++){
             System.out.print("Player " + (i+1) + ": ");
-            int charClass = scan.nextInt();
-            switch(charClass){
+            int CharClass = scan.nextInt();
+            switch(CharClass){
                 case(1):
                     System.out.println("You have chosen Barbarian");  
                     players.add(new Barbar());
@@ -73,7 +73,7 @@ public class Game {
         }
 
         for(int i = 0; i < players.size(); i++){
-            System.out.println(players.get(i).inv.inventoryList);
+            System.out.println(players.get(i).inv.InventoryList);
         }
         // ^ this prints player inventory
         DIE.encountStart(players);
