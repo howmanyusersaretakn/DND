@@ -10,7 +10,7 @@ public class Game {
         int PlayerNum = scan.nextInt();
         System.out.println("Welcome to a DND journey. Pick your character class \n 1. Barbarian \n 2. Bard \n 3. Cleric \n 4. Druid \n 5. Fighter \n 6. Monk \n 7. Paladin \n 8. Ranger \n 9. Rogue \n 10. Sorceror \n 11. Warlock \n 12. Wizard");
         for(int i = 0; i < PlayerNum; i++){
-            System.out.print("Player " + (i+1) + ":");
+            System.out.print("Player " + (i+1) + ": ");
             int charClass = scan.nextInt();
             switch(charClass){
                 case(1):

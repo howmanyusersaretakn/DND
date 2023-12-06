@@ -4,6 +4,9 @@ public class Inventory {
     public void inventoryAdd(String item){
         inventoryList.add(item);
     }
+    public void inventoryRem(String item){
+        inventoryList.remove(item);
+    }
     public void inventoryBasic(){
         inventoryList.add("Backpack");
         inventoryList.add("Potion");

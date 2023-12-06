@@ -6,20 +6,22 @@ public class Player {
     private int Intel;
     private int Wis;
     private int Cha;
-    private int hp;
+    private int Hp;
+    private String name;
+    ArrayList<String> Attacks = new ArrayList<String>();
     Inventory inv = new Inventory();
-    Player(int Str, int Dex, int Con, int Intel, int Wis, int Cha, int hp){
+    Player(int Str, int Dex, int Con, int Intel, int Wis, int Cha, int Hp){
         this.Str = Str;
         this.Dex = Dex;
         this.Con = Con;
         this.Intel = Intel;
         this.Wis = Wis;
         this.Cha = Cha;
-        this.hp = hp;
+        this.Hp = Hp;
     }
 
     public String toString() {
-        return "Strength: " + this.Str + ", Dexterity: " + this.Dex + ", Constitution: " + this.Con + ", Intelligence: " + this.Intel + ", Wisdom: " + this.Wis + ", Charisma:" + this.Cha + ", HP: " + this.hp;
+        return "Strength: " + this.Str + ", Dexterity: " + this.Dex + ", Constitution: " + this.Con + ", Intelligence: " + this.Intel + ", Wisdom: " + this.Wis + ", Charisma:" + this.Cha + ", HP: " + this.Hp;
     }
 
     // public String inventoryPrint(){
@@ -32,7 +34,9 @@ class Barbar extends Player{
     Barbar(){
         super(16, 12, 16, 14, 14, 9, 15);
         inv.inventoryBasic();
-        inv.inventoryAdd("Axe");
+        inv.inventoryAdd("Great Axe");
+        inv.inventoryAdd("Longsword");
+        inv.inventoryAdd("Javelin");
     } 
 
     public String toString() { 
@@ -45,6 +49,7 @@ class Bard extends Player{
         super(12, 17, 11, 14, 13, 12, 8);
         inv.inventoryBasic();
         inv.inventoryAdd("Lute");
+        inv.inventoryAdd("Rapier");
     }
 
     public String toString() { 
@@ -56,6 +61,10 @@ class Cleric extends Player{
         super(9, 9, 8, 14, 12, 11, 7);
         inv.inventoryBasic();
         inv.inventoryAdd("Mace");
+        inv.inventoryAdd("Light Crossbow");
+        inv.inventoryAdd("20 bolts");
+        inv.inventoryAdd("Shield");
+        inv.inventoryAdd("Cross");
     }
 
     public String toString() { 
@@ -66,7 +75,8 @@ class Druid extends Player{
     Druid(){
         super(14, 13, 8, 10, 15, 17, 7);
         inv.inventoryBasic();
-        inv.inventoryAdd("Staff");
+        inv.inventoryAdd("Scimitar");
+        inv.inventoryAdd("Wooden Shield");
     }
 }
 class Fighter extends Player{
@@ -74,6 +84,8 @@ class Fighter extends Player{
         super(12, 11, 14, 13, 11, 8, 12);
         inv.inventoryBasic();
         inv.inventoryAdd("Poleaxe");
+        inv.inventoryAdd("Light Crossbow");
+        inv.inventoryAdd("20 bolts");
     }
 }
 class Monk extends Player{
@@ -81,6 +93,7 @@ class Monk extends Player{
         super(13, 10, 12, 13, 13, 17, 9);
         inv.inventoryBasic();
         inv.inventoryAdd("Spear");
+        inv.inventoryAdd("10 darts");
     }
 }
 class Paladin extends Player{
@@ -88,6 +101,7 @@ class Paladin extends Player{
         super(10, 14, 5, 14, 16, 16, 7);
         inv.inventoryAdd("Longsword");
         inv.inventoryAdd("Shield");
+        
     }
 }
 class Ranger extends Player{

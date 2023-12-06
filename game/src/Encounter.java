@@ -5,7 +5,8 @@ public class Encounter {
     public void encountStart(ArrayList<Player> players){
         Enemy enemy = null;
         int enemyType = Rolls.roll(1);
-                
+        int enemyInitiative = Rolls.roll(21);
+
         switch(enemyType){
             case(0):
             int TinyRand = (int) (Math.random() * Enemy.tiny.length);
@@ -25,14 +26,48 @@ public class Encounter {
                enemy = new PseudoDragon();
             } else if(Enemy.tiny[TinyRand].equals("Intellect Devourer(2)")){
                 enemy = new DevourIntel();
+            } else {
+                System.exit(0);
             }
             break;
             case(1):
             int SmallRand = (int) (Math.random() * Enemy.small.length);
+            if(Enemy.small[SmallRand].equals("Dark Mantle")){
+                enemy = new DarkMantle();
+            } else if(Enemy.small[SmallRand].equals("Giant Centipede")){
+                enemy = new CentiGiant();
+            } else if(Enemy.small[SmallRand].equals("Winged Kobold")){
+                enemy = new KoboldWing();
+            } else if(Enemy.small[SmallRand].equals("Awakened Shrub")){
+                enemy = new ShrubAwake();
+            } else if(Enemy.small[SmallRand].equals("Flying Sword")){
+                enemy = new SwordFly();
+            } 
             case(2):
-
+            int MedRand = (int) (Math.random()*Enemy.med.length);
+            if(Enemy.med[MedRand].equals("")){
+                enemy = new Acolyte();
+            } else if(Enemy.med[MedRand].equals("")){
+                enemy = new ArmorAnim();
+            } else if(Enemy.med[MedRand].equals("")){
+                enemy = new ArchMage();
+            } else if(Enemy.med[MedRand].equals("")){
+                enemy = new DoppleGang();
+            } else if(Enemy.med[MedRand].equals("")){
+                enemy = new Bandit();
+            } else if(Enemy.med[MedRand].equals("")){
+                enemy = new CaptBandit();
+            } else if(Enemy.med[MedRand].equals("")){
+                enemy = new Berserker();
+            } else if(Enemy.med[MedRand].equals("")){
+                enemy = new BlueDragonWyrm();
+            } else if(Enemy.med[MedRand].equals("")){
+                enemy = new DeathKnight();
+            } else if(Enemy.med[MedRand].equals("")){
+                enemy = new DrowMage();
+            } 
             case(3):
-
+            
             case(4):
 
             case(5):
@@ -71,17 +106,21 @@ public class Encounter {
             }
         }
 
-        for (int i = 0; i < playerInitiatives.size()) {
+        for (int i = 0; i < playerInitiatives.size(); i++) {
             Player player = players.get(initiativeIndex.get(i));
+            int playerInitiative = playerInitiatives.get(i);
+            if (enemyInitiative > playerInitiative) {
+                // enemy goes first
+                System.out.println(enemy + " attacks!");
+                // attacks the player
+                // prompts the player
+            } else {
+                // player goes first
+                System.out.println("Player " + initiativeIndex.get(i) + " goes first");
+                //prompts the player
+                // enemy attacks
+            }
         }
-        //^what is this
-        
-        // ArrayList<Player> newPlayers = (ArrayList<Player>) players.clone();
 
-
-        // System.out.println(enemy.toString() + " has appeared!");
-        // System.out.println("You rolled " + PlayerInitiative);
-        // System.out.println("The enemy rolled " + EnemyIntitiative);
-        // if(PlayerInitiative < EnemyIntitiative){
     }
 }
