@@ -37,6 +37,8 @@ class Barbar extends Player{
         inv.inventoryAdd("Great Axe");
         inv.inventoryAdd("Longsword");
         inv.inventoryAdd("Javelin");
+        Collections.addAll(Attacks, "", "");
+
     } 
 
     public String toString() { 

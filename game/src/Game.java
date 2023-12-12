@@ -77,6 +77,7 @@ public class Game {
         }
         // ^ this prints player inventory
         DIE.encountStart(players);
+        System.out.println("You are back in the forest");
         scan.close();
     }
 }
