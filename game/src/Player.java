@@ -37,8 +37,7 @@ class Barbar extends Player{
         inv.inventoryAdd("Great Axe");
         inv.inventoryAdd("Longsword");
         inv.inventoryAdd("Javelin");
-        Collections.addAll(Attacks, "", "");
-
+        Collections.addAll(Attacks, "Swing", "Stab", "Throw");
     } 
 
     public String toString() { 
@@ -136,6 +135,7 @@ class Warlock extends Player{
 class Wizard extends Player{
     Wizard(){
         super(15, 15, 14, 17, 8, 7, 8);
+        inv.inventoryBasic();
     }
 }
 // End of Player Stats

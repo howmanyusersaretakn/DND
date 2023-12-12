@@ -108,10 +108,6 @@ public class Encounter {
             case(5):
             int GargantRand = (int)(Math.random()*Enemy.gargant.length);
 
-
-            default:
-
-
         }
 
         ArrayList<Integer> playerInitiatives = new ArrayList<Integer>();
@@ -143,7 +139,8 @@ public class Encounter {
             }
         }
 
-        for (int i = 0; i < playerInitiatives.size(); i++) {
+        while(enemy.Hp != 0){
+            for (int i = 0; i < playerInitiatives.size(); i++) {
             Player player = players.get(initiativeIndex.get(i));
             int playerInitiative = playerInitiatives.get(i);
             if (enemyInitiative > playerInitiative) {
@@ -173,7 +170,7 @@ public class Encounter {
                 int Choice = scan.nextInt();
                 switch(Choice){
                     case(1):
-
+                        System.out.println();
                     case(2):
                         System.out.println("You ran away. Coward.");
                         Choice = 0;
@@ -184,6 +181,7 @@ public class Encounter {
                 // enemy attacks
             }
         }
+    }
 
     }
 }

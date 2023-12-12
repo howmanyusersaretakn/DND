@@ -46,7 +46,7 @@ public class Game {
                     players.add(new Ranger());
                     break;
                 case(9):
-//                    System.out.println("You have chosen Rogue");  
+                    System.out.println("You have chosen Rogue");  
                     players.add(new Rogue());
                     break;
                 case(10):
